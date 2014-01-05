@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onclick="generateName()">
 <head>
 <title>Payment Service Name Generator</title>
 <script>
@@ -27,30 +27,25 @@ function generateName() {
   document.getElementById("generatedName").innerHTML=first+second;
 }
 </script>
-
 <style>
+html {
+  cursor: pointer;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
 h1 {
   padding: 30px;
   border: 1px solid;
-  width: 500px;
-  text-align: center;
+  width: 600px;
   font-size: 60pt;
   margin-left: auto;
   margin-right: auto;
-  font-family: Helvetica, Arial, sans-serif;
-}
-h1:hover {
-  cursor:pointer;
-  color:green;
-}
-h2 {
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
+  color: green;
 }
 </style>
 </head>
 <body onload="generateName()">
 <h2>Payment Service Name Generator</h2>
-<h1 id="generatedName" onclick="generateName()"></h1>
+<h1 id="generatedName"></h1>
 </body>
 </html>
